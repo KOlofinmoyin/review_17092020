@@ -29,7 +29,7 @@ INPUT                |                  OUTPUT
 (done)("")                  |           "please use the add or done keyword, followed by a to-do"
 (done)"add buy milk"        |           "1. buy milk"
 (done)("done 1")            |           "1. wash car"
-"add wash car"        |           "1. buy milk, 2. wash car"
+(done)"add wash car"        |           "1. buy milk, 2. wash car"
 ("done 2")            |           "1. buy milk"
 ("done 1")            |           "you don't have any current to-do list entries"
 ```

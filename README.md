@@ -21,12 +21,13 @@ Assumptions (Useful keywords):
 4. 'done'
 5. 'entry'
 6. 'item'
+7. to-do list has no limit to entries it can accept.
 
 ```
 INPUT                |                  OUTPUT
 ===============================================
 (done)("")                  |           "please use the add or done keyword, followed by a to-do"
-"add buy milk"        |           "1. buy milk"
+(done)"add buy milk"        |           "1. buy milk"
 ("done 1")            |           "1. wash car"
 "add wash car"        |           "1. buy milk, 2. wash car"
 ("done 2")            |           "1. buy milk"

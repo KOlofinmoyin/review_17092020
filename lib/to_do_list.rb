@@ -11,11 +11,12 @@ attr_reader :entry
 
     if entry.include?('add')
       @list_basket << entry[4,20]
-      p @list_basket
       @list_basket.each_with_index {|phrase,index|
         @content = "#{index+1}. #{phrase}"
       }
       @content
+    elsif entry.include?('done') && @list_basket.size == 1
+      @content = "You don't have any current to-do list entries."
     elsif entry.include?('done')
       outtake = entry.split(" ")
       index = outtake.last.to_i

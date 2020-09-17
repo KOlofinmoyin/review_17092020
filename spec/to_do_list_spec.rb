@@ -23,5 +23,10 @@ describe ToDoList do
       list.basket("add wash car")
       expect(list.basket("done 2")).to eq "1. buy milk"
     end
+
+    it "takes 'done 1' when only single entry on to_do_list and returns: 'You don't have any current to-do list entries.'" do
+      list.basket("add buy milk")
+      expect(list.basket("done 1")).to eq "You don't have any current to-do list entries."
+    end
   end
 end

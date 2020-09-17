@@ -17,5 +17,11 @@ describe ToDoList do
       list.basket("add wash car")
       expect(list.basket("done 1")).to eq "1. wash car"
     end
+
+    it "takes 'done 2' and returns '1. buy milk'" do
+      list.basket("add buy milk")
+      list.basket("add wash car")
+      expect(list.basket("done 2")).to eq "1. buy milk"
+    end
   end
 end

@@ -31,5 +31,5 @@ INPUT                |                  OUTPUT
 (done)("done 1")            |           "1. wash car"
 (done)"add wash car"        |           "1. buy milk, 2. wash car"
 (done)("done 2")            |           "1. buy milk"
-(done)("done 1") when only entry item on to_do_list            |           "You don't have any current to-do list entries."
+(done)("done 1") when only a single entry is in to_do_list            |           "You don't have any current to-do list entries."
 ```

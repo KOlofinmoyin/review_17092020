@@ -13,10 +13,10 @@ attr_reader :entry
       add_to_do_entry(entry)
       @content
     elsif entry.include?('done') && @list_basket.size == 1
-      delete_to_do_entry(entry)
+      complete_to_do_entry(entry)
       @content = "You don't have any current to-do list entries."
     elsif entry.include?('done')
-      delete_to_do_entry(entry)
+      complete_to_do_entry(entry)
       @content
     else
       @content = 0
@@ -33,7 +33,7 @@ attr_reader :entry
     }
   end
 
-  def delete_to_do_entry(entry)
+  def complete_to_do_entry(entry)
     outtake = entry.split(" ")
     index = outtake.last.to_i
     @list_basket.delete_at(index-1)

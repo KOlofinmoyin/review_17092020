@@ -4,8 +4,8 @@ describe ToDoList do
   let(:list) { described_class.new }
 
   describe '#basket' do
-    it "takes '' and returns 'please use the add or done keyword, followed by a to-do entry'" do
-      expect(list.basket("")).to eq "please use the add or done keyword, followed by a to-do entry"
+    it "takes '' and returns 'Please use the add or done keyword, followed by a to-do entry'" do
+      expect(list.basket("")).to eq "Please use the add or done keyword, followed by a to-do entry"
     end
 
     it "takes 'add buy milk' and returns '1. buy milk'" do

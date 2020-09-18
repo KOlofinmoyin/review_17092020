@@ -11,13 +11,10 @@ attr_reader :entry
 
     if entry.include?('add')
       add_to_do_entry(entry)
-      @content
     elsif entry.include?('done') && @list_basket.size == 1
       complete_to_do_entry(entry)
-      @content = "You don't have any current to-do list entries."
     elsif entry.include?('done')
       complete_to_do_entry(entry)
-      @content
     else
       @content = 0
     end
@@ -31,6 +28,7 @@ attr_reader :entry
     @list_basket.each_with_index {|phrase,index|
       @content = "#{index+1}. #{phrase}"
     }
+    @content
   end
 
   def complete_to_do_entry(entry)
@@ -40,5 +38,7 @@ attr_reader :entry
     @list_basket.each_with_index {|phrase,index|
       @content = "#{index+1}. #{phrase}"
     }
+    @list_basket.size != 1 ? @content = "You don't have any current to-do list entries." : @content
+
   end
 end

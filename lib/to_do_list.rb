@@ -1,5 +1,5 @@
 class ToDoList
-attr_reader :entry, :list_basket
+  attr_reader :entry, :list_basket
 
   def initialize
     @list_basket = []
@@ -11,12 +11,8 @@ attr_reader :entry, :list_basket
 
     if entry.include?('add')
       add_to_do_entry(entry)
-    elsif entry.include?('done') && @list_basket.size == 1
-      complete_to_do_entry(entry)
     elsif entry.include?('done')
       complete_to_do_entry(entry)
-    else
-      @content = 0
     end
 
   end

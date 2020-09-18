@@ -1,5 +1,5 @@
 class ToDoList
-attr_reader :entry
+attr_reader :entry, :list_basket
 
   def initialize
     @list_basket = []
@@ -38,7 +38,6 @@ attr_reader :entry
     @list_basket.each_with_index {|phrase,index|
       @content = "#{index+1}. #{phrase}"
     }
-    @list_basket.size != 1 ? @content = "You don't have any current to-do list entries." : @content
-
+    @list_basket.size < 1 ? @content = "You don't have any current to-do list entries." : @content
   end
 end

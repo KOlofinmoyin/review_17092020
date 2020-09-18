@@ -27,6 +27,7 @@ describe ToDoList do
     it "takes 'done 1' when only single entry on to_do_list and returns: 'You don't have any current to-do list entries.'" do
       list.basket("add buy milk")
       expect(list.basket("done 1")).to eq "You don't have any current to-do list entries."
+      # expect(:list_basket).to be_empty
     end
   end
 end
